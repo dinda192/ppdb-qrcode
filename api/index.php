@@ -1,17 +1,17 @@
 <?php
 
-// Paksa environment variabel Vercel Serverless
-putenv('LOG_CHANNEL=stderr');
+// Set environment langsung di runtime
 $_ENV['LOG_CHANNEL'] = 'stderr';
+$_SERVER['LOG_CHANNEL'] = 'stderr';
 
-putenv('VIEW_COMPILED_PATH=/tmp');
 $_ENV['VIEW_COMPILED_PATH'] = '/tmp';
+$_SERVER['VIEW_COMPILED_PATH'] = '/tmp';
 
-putenv('SESSION_DRIVER=cookie');
 $_ENV['SESSION_DRIVER'] = 'cookie';
+$_SERVER['SESSION_DRIVER'] = 'cookie';
 
-putenv('DB_CONNECTION=pgsql');
 $_ENV['DB_CONNECTION'] = 'pgsql';
+$_SERVER['DB_CONNECTION'] = 'pgsql';
 
-// Forward permintaan ke entry point Laravel
+// Forward permintaan ke index public
 require __DIR__ . '/../public/index.php';

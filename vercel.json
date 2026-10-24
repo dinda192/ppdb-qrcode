@@ -2,6 +2,12 @@
     "version": 2,
     "framework": null,
     "outputDirectory": "public",
+    "env": {
+        "LOG_CHANNEL": "stderr",
+        "VIEW_COMPILED_PATH": "/tmp",
+        "SESSION_DRIVER": "cookie",
+        "DB_CONNECTION": "pgsql"
+    },
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.1"
